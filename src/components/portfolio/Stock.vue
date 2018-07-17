@@ -40,9 +40,9 @@
             }
         },
         methods: {
-            ...mapActions([
+            ...mapActions({
                 placeSellOrder: 'sellStock'
-            ]),
+            }),
             sellStock() {
                 const order = {
                     stockId: this.stockId,
