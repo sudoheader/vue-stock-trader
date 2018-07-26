@@ -57,11 +57,11 @@
             }),
             sellStock() {
                 const order = {
-                    stockId: this.stockId,
+                    stockId: this.stock.id,
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
-                this.placeSellStock(order);
+                this.placeSellOrder(order);
                 this.quantity = 0;
             }
         }

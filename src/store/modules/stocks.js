@@ -16,19 +16,13 @@ const mutations = {
 };
 
 const actions = {
-    buyStock: ({
-        commit
-    }, order) => {
+    buyStock: ({commit}, order) => {
         commit('BUY_STOCK', order);
     },
-    initStocks: ({
-        commit
-    }) => {
-        comit('SET_STOCKS', stocks);
+    initStocks: ({commit}) => {
+        commit('SET_STOCKS', stocks);
     },
-    randomizeStocks: ({
-        commit
-    }) => {
+    randomizeStocks: ({commit}) => {
         commit('RND_STOCKS');
     }
 };
@@ -44,4 +38,4 @@ export default {
     mutations,
     actions,
     getters
-}
+};

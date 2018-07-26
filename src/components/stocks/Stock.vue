@@ -19,10 +19,10 @@
                 </div>
                 <div class="pull-right">
                     <button
-                        class="btn btn-success"
-                        @click="buyStock"
-                        :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)"
-                        >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
+                            class="btn btn-success"
+                            @click="buyStock"
+                            :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)"
+                    >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
                     </button>
                 </div>
             </div>
@@ -46,7 +46,7 @@
         },
         computed: {
             funds() {
-              this.$store.getters.funds;
+                return this.$store.getters.funds;
             },
             insufficientFunds() {
                 return this.quantity * this.stock.price > this.funds;
@@ -59,7 +59,6 @@
                     stockPrice: this.stock.price,
                     quantity: this.quantity
                 };
-                console.log(order);
                 this.$store.dispatch('buyStock', order);
                 this.quantity = 0;
             }

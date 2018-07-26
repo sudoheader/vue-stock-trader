@@ -18,7 +18,7 @@
             appHeader: Header
         },
         created() {
-            this.$store.dispatch('initStocks')
+            this.$store.dispatch('initStocks');
         }
     }
 </script>
@@ -49,12 +49,13 @@
 
     @keyframes slide-out {
         from {
-            transfrom: translateY(0);
+            transform: translateY(0);
             opacity: 1;
         }
         to {
-            transform: translate(-30px);
+            transform: translateY(-30px);
             opacity: 0;
         }
     }
 </style>
+
